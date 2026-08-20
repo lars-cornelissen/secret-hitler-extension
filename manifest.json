@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Secret Hitler Auto End Term",
+  "version": "1.0.0",
+  "description": "Automatically clicks the \"End Term\" button when it becomes active in Secret Hitler online games.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://secret-hitler.online/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://secret-hitler.online/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Secret Hitler Auto End Term"
+  }
+}
